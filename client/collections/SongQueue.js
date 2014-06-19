@@ -7,7 +7,7 @@ var SongQueue = Songs.extend({
         this.playFirst();
       }
       // this.trigger('play', this);
-  });
+    });
 
     // this.on('remove', function() {
 
