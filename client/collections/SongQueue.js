@@ -6,18 +6,18 @@ var SongQueue = Songs.extend({
       if(this.length === 1) {
         this.playFirst();
       }
-      // this.trigger('play', this);
     });
-
-    // this.on('remove', function() {
-
-    // },
   },
 
   playFirst: function(){
-    console.log('Im here?');
     this.models[0].play();
-  }
+  },
+
+  // playNext: function() {
+  //   if(this.models.length > 0) {
+  //     this.models[0].play();
+  //   }
+  // }
 
 });
 
