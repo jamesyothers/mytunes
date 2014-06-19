@@ -19,7 +19,9 @@ var AppModel = Backbone.Model.extend({
     }, this);
 
     params.library.on('enqueue', function(song){
+      console.log('inside app model', this.get('songQueue'));
       this.get('songQueue').add(song);
+      console.log('inside app model', this.get('songQueue'));
     }, this);
   }
 
