@@ -26,12 +26,13 @@ var AppModel = Backbone.Model.extend({
       var currentSong = this.get('currentSong');
       var songQueue = this.get('songQueue');
 
-      console.log(this.get('songQueue').length);
-      console.log('songqueue before: ', this.get('songQueue'));
-      this.get('songQueue').remove(songQueue.models[0]);
-      console.log('songqueue after: ', this.get('songQueue'));
-      console.log(this.get('songQueue').length);
+      //console.log("song: ", songQueue.at(0));
 
+      console.log('songqueue before: ', this.get('songQueue'));
+      console.log(currentSong);
+      songQueue.shift();
+      console.log('songqueue after: ', songQueue);
+      songQueue.at(0).play();
     }, this);
   },
 
