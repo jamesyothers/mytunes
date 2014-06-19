@@ -23,11 +23,18 @@ var AppModel = Backbone.Model.extend({
       this.get('songQueue').add(song);
       console.log('inside app model', this.get('songQueue'));
     }, this);
+    params.library.on('ended', function(song){
+      // console.log('inside app model', this.get('songQueue'));
+      console.log('inside app model ended');
 
-    // params.library.on('ended', function() {
-    //   console.log('ended');
-    //   // console.log(this.get('currentSong'));
-    // }, this);
-  }
+    }, this);
+  },
+
+
+  // removeSong: function() {
+  //   console.log("I work!")
+  //   console.log(this);
+  // }
+
 
 });
