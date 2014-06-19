@@ -19,22 +19,22 @@ var AppModel = Backbone.Model.extend({
     }, this);
 
     params.library.on('enqueue', function(song){
-      // console.log('inside app model', this.get('songQueue'));
       this.get('songQueue').add(song);
-      console.log('inside app model', this.get('songQueue'));
     }, this);
+
     params.library.on('ended', function(song){
-      // console.log('inside app model', this.get('songQueue'));
-      console.log('inside app model ended');
+      var currentSong = this.get('currentSong');
+      var songQueue = this.get('songQueue');
+
+      console.log(this.get('songQueue').length);
+      console.log('songqueue before: ', this.get('songQueue'));
+      this.get('songQueue').remove(songQueue.models[0]);
+      console.log('songqueue after: ', this.get('songQueue'));
+      console.log(this.get('songQueue').length);
 
     }, this);
   },
 
-
-  // removeSong: function() {
-  //   console.log("I work!")
-  //   console.log(this);
-  // }
 
 
 });
