@@ -17,14 +17,17 @@
     <script src="views/PlayerView.js"></script>
     <script src="views/LibraryView.js"></script>
     <script src="views/LibraryEntryView.js"></script>
+    <!-- added songQueueView and songQueueEntryView files -->
     <script src="views/SongQueueView.js"></script>
     <script src="views/SongQueueEntryView.js"></script>
     <script src="views/AppView.js"></script>
 
     <script>
+      // same as document.ready
       $(function(){
         // set up model objects
         var library = new Songs(songData);
+        // pass in the library collection instance as a property of the app
         var app = new AppModel({library: library});
 
         // build a view for the top level of the whole app
