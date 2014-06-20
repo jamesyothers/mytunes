@@ -9,9 +9,9 @@ var LibraryEntryView = Backbone.View.extend({
     'click': function() {
       this.model.enqueue(this.model);
     },
-    'dblclick': function() {
-      this.model.dequeue(this.model);
-    }
+    // 'dblclick': function() {
+    //   this.model.dequeue(this.model);
+    // }
   },
 
   render: function(){
